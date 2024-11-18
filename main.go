@@ -8,6 +8,11 @@ import (
 func main() {
 	fmt.Println("Welcome!")
 
+	fmt.Println("This is new line!")
+	http.HandleFunc("/home", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "This is 3rd anonymous API test!")
+	})
+
 	http.HandleFunc("/first", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "This is 3rd anonymous API test!")
 	})
