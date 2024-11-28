@@ -17,6 +17,11 @@ func main() {
 		fmt.Fprintf(w, "This is 3rd anonymous API test!")
 	})
 
+	fmt.Println("Added one new func!")
+	http.HandleFunc("/anotherTest", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "Hello, this is a another anonymous API!")
+	})
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, this is an anonymous API!")
 	})
