@@ -31,4 +31,5 @@ func main() {
 	})
 
 	http.ListenAndServe(":8080", nil)
+	fmt.Println("Bye bye!!!")
 }
