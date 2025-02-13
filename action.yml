@@ -1,0 +1,14 @@
+name: GitHub Actions Demo - File 2
+
+on:
+  workflow_call:
+
+jobs:
+  The-action-that-should-run-afterwards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Amazing step
+        uses: actions/checkout@v2
+
+      - name: No pipeline build dependency
+        run: echo "Cool step from file 1."
